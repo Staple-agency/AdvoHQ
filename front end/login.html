@@ -264,6 +264,28 @@
       font-size: 0.7rem;
     }
 
+
+
+    /* ─── OR DIVIDER ─── */
+    .or-divider {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin: 1.1rem 0;
+      color: var(--ink-4);
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .or-divider::before,
+    .or-divider::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--line);
+    }
+
     /* ─── DASHBOARD ─── */
     .dashboard-wrap { padding: 1.5rem 0 4rem; }
 
@@ -870,10 +892,18 @@ function renderLogin() {
       </div>
 
       <button class="btn btn-primary login-btn-full" id="login-btn">
-        <i class="fas fa-arrow-right-to-bracket"></i> Sign In
+        <i class="fas fa-arrow-right-to-bracket"></i> Sign Up
       </button>
 
       <div id="login-err" class="error-msg"></div>
+
+      <div class="or-divider">or</div>
+
+      <a href="login2.html" style="text-decoration:none; display:block;">
+        <button class="btn btn-outline login-btn-full" style="font-size:0.9rem;">
+          Login
+        </button>
+      </a>
 
       <div class="login-hint">
         <a href="index.html" style="color:var(--ink-4); text-decoration:none; font-size:0.75rem; display:inline-flex; align-items:center; gap:0.3rem; transition:color 0.15s;"
